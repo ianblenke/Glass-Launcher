@@ -2,4 +2,7 @@
 /bin
 /gen
 /libs
+/build
+local.properties
+/.gradle
 /.settings
