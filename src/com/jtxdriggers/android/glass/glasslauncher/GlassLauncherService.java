@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.google.android.glass.timeline.LiveCard;
+import com.google.android.glass.timeline.LiveCard.PublishMode;
 import com.google.android.glass.timeline.TimelineManager;
 
 import android.app.PendingIntent;
@@ -155,7 +156,7 @@ public class GlassLauncherService extends Service {
 	        Intent intent = new Intent(context, MenuActivity.class);
 	        mLiveCard.setAction(PendingIntent.getActivity(context, 0,
 	                intent, 0));
-	        mLiveCard.publish(null);
+	        mLiveCard.publish(PublishMode.SILENT);
 	    } else {
 	        // Card is already published.
 	        return;
